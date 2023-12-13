@@ -1,6 +1,7 @@
 package user_related;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,18 @@ public class ManagerTest {
 	public void setUp() {
 		manager = new Manager("John", "Doe", "Storczykowa 23", "+48 274289374", "john@gmail.com", "johndoe",
 				"password");
+	}
+
+	@Test
+	public void testRegisterAccount() {
+		manager.registerAccount();
+		String generatedLogin = manager.getLogin();
+		String generatedPassword = manager.getPassword();
+
+		assertTrue(generatedLogin.equals("JohnDoe" + manager.getEmployeeID()));
+
+		assertTrue(generatedPassword.startsWith("Shelter-"));
+		assertTrue(generatedPassword.substring(8).matches("\\d{5}"));
 	}
 
 	@Test

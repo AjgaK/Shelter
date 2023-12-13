@@ -1,5 +1,7 @@
 package user_related;
 
+import java.util.Random;
+
 public class Employee extends User {
 	protected static long lastID = 0;
 	private long employeeID;
@@ -10,8 +12,13 @@ public class Employee extends User {
 		this.employeeID = ++lastID;
 	}
 
-	public static void registerAccount() {
-
+	public void registerAccount() {
+		String username = getFirstName() + getLastName() + employeeID;
+		Random rand = new Random();
+		int fiveDigitNumber = 10000 + rand.nextInt(90000);
+		String password = "Shelter-" + fiveDigitNumber;
+		setLogin(username);
+		setPassword(password);
 	}
 
 	public long getEmployeeID() {
