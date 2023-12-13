@@ -20,12 +20,15 @@ public abstract class User {
 		this.password = password;
 	}
 
-	public void changeLoginCredentials() {
-
+	public void changeLoginCredentials(String newLogin, String newPassword) {
+		this.login = newLogin;
+		this.password = newPassword;
 	}
 
-	public void recoverAccount() {
-
+	public void recoverAccount(String email) {
+		if (this.email.equals(email)) {
+			this.password = "defaultPassword";
+		}
 	}
 
 	public String getFirstName() {
