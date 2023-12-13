@@ -1,6 +1,7 @@
 package user_related;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -86,5 +87,25 @@ public abstract class UserBaseTest {
 	public void testSetPassword() {
 		user.setPassword("newpassword");
 		assertEquals("newpassword", user.getPassword());
+	}
+
+	@Test
+	public void testChangeLoginCredentials() {
+		user.changeLoginCredentials("newjohndoe", "newpassword");
+		assertEquals("newjohndoe", user.getLogin());
+		assertEquals("newpassword", user.getPassword());
+	}
+
+	@Test
+	public void testRecoverAccountWithCorrectEmail() {
+		user.recoverAccount("john@gmail.com");
+		assertEquals("defaultPassword", user.getPassword());
+	}
+
+	@Test
+	public void testRecoverAccountWithIncorrectEmail() {
+		String originalPassword = user.getPassword();
+		user.recoverAccount("wrong@example.com");
+		assertEquals(originalPassword, user.getPassword());
 	}
 }
