@@ -16,4 +16,19 @@ public class Customer extends User {
 		this.customerID = ++lastID;
 	}
 
+	public void blacklist() {
+
+	}
+
+	public void requestAdoption() {
+
+	}
+
+	public long getCustomerID() {
+		return customerID;
+	}
+
+	public List<Animal> getAdoptedAnimals() {
+		return adoptedAnimals;
+	}
 }
