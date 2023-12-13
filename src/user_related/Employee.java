@@ -24,4 +24,8 @@ public class Employee extends User {
 	public long getEmployeeID() {
 		return employeeID;
 	}
+
+	public static long getLastID() {
+		return lastID;
+	}
 }

@@ -25,4 +25,13 @@ public class EmployeeTest extends UserBaseTest {
 		assertTrue(generatedPassword.startsWith("Shelter-"));
 		assertTrue(generatedPassword.substring(8).matches("\\d{5}"));
 	}
+
+	@Test
+	public void testGetID() {
+		long previousID = Employee.getLastID();
+		Employee newEmployee = new Employee("Jane", "Doe", "Kwiatkowa 7", "+48 987654321", "jane@example.com",
+				"janedoe", "newpassword");
+
+		assertEquals(previousID + 1, newEmployee.getEmployeeID());
+	}
 }

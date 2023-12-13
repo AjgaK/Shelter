@@ -31,4 +31,8 @@ public class Customer extends User {
 	public List<Animal> getAdoptedAnimals() {
 		return adoptedAnimals;
 	}
+
+	public static long getLastID() {
+		return lastID;
+	}
 }
