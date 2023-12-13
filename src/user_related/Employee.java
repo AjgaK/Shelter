@@ -10,4 +10,11 @@ public class Employee extends User {
 		this.employeeID = ++lastID;
 	}
 
+	public static void registerAccount() {
+
+	}
+
+	public long getEmployeeID() {
+		return employeeID;
+	}
 }
