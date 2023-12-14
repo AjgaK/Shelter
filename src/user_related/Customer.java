@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import animal_related.Animal;
+import support.Blacklist;
+import support.Reason;
 
 public class Customer extends User {
 	protected static long lastID = 0;
@@ -16,8 +18,9 @@ public class Customer extends User {
 		this.customerID = ++lastID;
 	}
 
-	public void blacklist() {
-
+	public void blacklist(Reason reason) {
+		Blacklist blacklist = new Blacklist();
+		blacklist.fillBlacklistFile(this, reason);
 	}
 
 	public void requestAdoption() {
