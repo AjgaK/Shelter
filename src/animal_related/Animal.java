@@ -81,4 +81,69 @@ public class Animal {
     public int getID() {
         return ID;
     }
+
+	public void setStatus(String status) {
+		this.status = status;
+		
+	}
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public double getWeight() {
+		return weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	public String getSpecies() {
+		return species;
+	}
+
+	public void setSpecies(String species) {
+		this.species = species;
+	}
+
+	public String getBreed() {
+		return breed;
+	}
+
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+
+	public Date getFoundDate() {
+		return foundDate;
+	}
+
+	public void setFoundDate(Date foundDate) {
+		this.foundDate = foundDate;
+	}
+
+	public List<String> getSpecialNeedsList() {
+		return specialNeedsList;
+	}
+
+	public void setSpecialNeedsList(List<String> specialNeedsList) {
+		this.specialNeedsList = specialNeedsList;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Object getName() {
+		return name;
+	}
 }

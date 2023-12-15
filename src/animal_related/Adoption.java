@@ -47,7 +47,52 @@ public class Adoption {
 
     }
 
-    private int getID() {
+    public Date getDate() {
+		return date;
+	}
+
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+
+	public double getFee() {
+		return fee;
+	}
+
+
+	public void setFee(double fee) {
+		this.fee = fee;
+	}
+
+
+	public List<String> getNotes() {
+		return notes;
+	}
+
+
+	public void setNotes(List<String> notes) {
+		this.notes = notes;
+	}
+
+
+	public void setID(int ID) {
+		this.ID = ID;
+	}
+
+
+	private int getID() {
 		return ID;
 	}
 

@@ -17,11 +17,25 @@ public class CareChecklist {
 
     public void viewChecklist() {
         System.out.println("Care Checklist:");
+
+        StringBuilder checklistDetails = new StringBuilder();
+
         for (ChecklistItem item : itemList) {
-            System.out.println("Name: " + item.getName());
-            System.out.println("Description: " + item.getDescription());
-            System.out.println("Status: " + item.getStatus());
-            System.out.println("------------------------");
+            checklistDetails.append("Name: ").append(item.getName()).append("\n");
+            checklistDetails.append("Description: ").append(item.getDescription()).append("\n");
+            checklistDetails.append("Status: ").append(item.getStatus()).append("\n");
+            checklistDetails.append("------------------------").append("\n");
         }
+
+        System.out.println(checklistDetails.toString());
+        
     }
+
+	public List<ChecklistItem> getItemList() {
+		return itemList;
+	}
+
+	public void setItemList(List<ChecklistItem> itemList) {
+		this.itemList = itemList;
+	}
 }
