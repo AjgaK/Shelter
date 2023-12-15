@@ -23,8 +23,10 @@ public class Customer extends User {
 		blacklist.fillBlacklistFile(this, reason);
 	}
 
-	public void requestAdoption() {
-
+	public void requestAdoption(Animal animal) {
+		adoptedAnimals.add(animal);
+		animal.editInformation(animal.getName(), animal.getDateOfBirth(), animal.getWeight(), animal.getSpecies(),
+				animal.getBreed(), animal.getFoundDate(), animal.getSpecialNeedsList(), "Pending Adoption");
 	}
 
 	public long getCustomerID() {
