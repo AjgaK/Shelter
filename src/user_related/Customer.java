@@ -42,4 +42,21 @@ public class Customer extends User {
 	public static long getLastID() {
 		return lastID;
 	}
+
+	public Blacklist getBlacklist() {
+		return blacklist;
+	}
+
+	public void setBlacklist(Blacklist blacklist) {
+		this.blacklist = blacklist;
+	}
+
+	public Employee getMonitoredBy() {
+		return monitoredBy;
+	}
+
+	public void setMonitoredBy(Employee monitoredBy) {
+		this.monitoredBy = monitoredBy;
+	}
+
 }

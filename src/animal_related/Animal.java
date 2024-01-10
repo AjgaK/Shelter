@@ -35,6 +35,34 @@ public class Animal {
 		this.status = "At Shelter";
 	}
 
+	public CareChecklist getChecklist() {
+		return checklist;
+	}
+
+	public void setChecklist(CareChecklist checklist) {
+		this.checklist = checklist;
+		checklist.setAnimal(this);
+	}
+
+	public Customer getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+
+	public List<Employee> getCarers() {
+		return carers;
+	}
+
+	public void addCarers(Employee newEmployee) {
+		if (!carers.contains(newEmployee)) {
+			carers.add(newEmployee);
+			newEmployee.addCaredAnimals(this);
+		}
+	}
+
 	public void viewAnimalDetails() {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 

@@ -28,4 +28,13 @@ public class ChecklistItem {
 	public String getStatus() {
 		return status;
 	}
+
+	public CareChecklist getChecklist() {
+		return checklist;
+	}
+
+	public void setChecklist(CareChecklist checklist) {
+		this.checklist = checklist;
+	}
+
 }

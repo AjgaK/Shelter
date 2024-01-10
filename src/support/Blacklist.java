@@ -35,6 +35,7 @@ public class Blacklist {
 	public void fillBlacklistFile(Customer customer, Reason reason) {
 		long customerID = customer.getCustomerID();
 		blacklistMap.put(customerID, reason);
+		customer.setBlacklist(this);
 	}
 
 	public void removeFromBlacklist(Customer customer) {
@@ -45,4 +46,5 @@ public class Blacklist {
 	public static boolean isCustomerBlacklisted(long customerID) {
 		return blacklistMap.containsKey(customerID);
 	}
+
 }
