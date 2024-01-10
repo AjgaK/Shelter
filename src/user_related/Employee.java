@@ -1,10 +1,16 @@
 package user_related;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
+
+import animal_related.Animal;
 
 public class Employee extends User {
 	protected static long lastID = 0;
 	private long employeeID;
+	private List<Animal> caredAnimals = new ArrayList<>();
+	private List<Customer> monitoredCustomers = new ArrayList<>();
 
 	public Employee(String firstName, String lastName, String address, String contactNumber, String email, String login,
 			String password) {

@@ -11,6 +11,8 @@ public class Customer extends User {
 	protected static long lastID = 0;
 	private long customerID;
 	List<Animal> adoptedAnimals = new ArrayList<>();
+	private Blacklist blacklist;
+	private Employee monitoredBy;
 
 	public Customer(String firstName, String lastName, String address, String contactNumber, String email, String login,
 			String password) {

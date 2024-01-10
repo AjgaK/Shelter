@@ -6,6 +6,7 @@ public class Meeting {
 	private LocalDate date;
 	private String report;
 	private String agenda;
+	private Calendar calendar;
 
 	public Meeting(LocalDate date, String agenda) {
 		this.date = date;
