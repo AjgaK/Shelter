@@ -4,9 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 import user_related.Customer;
+import user_related.Manager;
 
 public class Blacklist {
 	private static Map<Long, Reason> blacklistMap;
+	private Manager managedBy;
 
 	public Blacklist() {
 		Blacklist.blacklistMap = new HashMap<>();

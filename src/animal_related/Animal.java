@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import user_related.Customer;
+import user_related.Employee;
+
 public class Animal {
 	private int ID;
 	private String name;
@@ -15,6 +18,9 @@ public class Animal {
 	private Date foundDate;
 	private List<String> specialNeedsList;
 	private String status;
+	private CareChecklist checklist;
+	private Customer customer;
+	private List<Employee> carers = new ArrayList<>();
 
 	public Animal(int ID, String name, Date dateOfBirth, double weight, String species, String breed, Date foundDate,
 			ArrayList<String> specialNeedsList) {
