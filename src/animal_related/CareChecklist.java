@@ -41,4 +41,23 @@ public class CareChecklist {
 	public void setItemList(List<ChecklistItem> itemList) {
 		this.itemList = itemList;
 	}
+
+	public Manager getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(Manager createdBy) {
+		this.createdBy = createdBy;
+		createdBy.addCreatedChecklists(this);
+	}
+
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
+		animal.setChecklist(this);
+	}
+
 }

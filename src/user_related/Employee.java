@@ -34,4 +34,18 @@ public class Employee extends User {
 	public static long getLastID() {
 		return lastID;
 	}
+
+	public void addCaredAnimals(Animal newAnimal) {
+		if (!caredAnimals.contains(newAnimal)) {
+			caredAnimals.add(newAnimal);
+			newAnimal.addCarers(this);
+		}
+	}
+
+	public void addMonitoredCustomers(Customer newCustomer) {
+		if (!monitoredCustomers.contains(newCustomer)) {
+			monitoredCustomers.add(newCustomer);
+			newCustomer.setMonitoredBy(this);
+		}
+	}
 }
